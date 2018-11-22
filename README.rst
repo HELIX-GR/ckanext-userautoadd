@@ -12,7 +12,7 @@ Settings below).
 Requirements
 ------------
 
-Tested with CKAN v2.5.2
+Update to work with CKAN v2.8.0
 
 ------------
 Installation
@@ -58,7 +58,7 @@ Development Installation
 To install ckanext-userautoadd for development, activate your CKAN virtualenv and
 do::
 
-    git clone https://github.com/aptivate/ckanext-userautoadd.git
+    git clone https://github.com/HELIX-GR/ckanext-userautoadd.git
     cd ckanext-userautoadd
     python setup.py develop
     pip install -r dev-requirements.txt
