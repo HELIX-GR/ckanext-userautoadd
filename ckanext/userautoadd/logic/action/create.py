@@ -3,11 +3,7 @@
 import pylons.config as config
 
 import ckan.logic as logic
-<<<<<<< HEAD
 import ckan.model as model
-=======
-import ckan.model as model1
->>>>>>> upstream/master
 import ckan.lib as lib
 from ckan.logic.action.create import user_create as ckan_user_create
 import ckan.plugins.toolkit as toolkit
@@ -17,11 +13,7 @@ _get_action = logic.get_action
 
 def user_create(context, data_dict):
     user_dict = ckan_user_create(context, data_dict)
-<<<<<<< HEAD
     user = model.User.get(user_dict['id'])
-=======
-    user = model1.User.get(user_dict['id'])
->>>>>>> upstream/master
     org_name = config.get('ckan.userautoadd.organization_name', '')
     role = config.get('ckan.userautoadd.organization_role', '')
     
@@ -39,10 +31,6 @@ def user_create(context, data_dict):
 	'id': org_name,
 	'role': role
     }
-<<<<<<< HEAD
-=======
-    #log1.debug('\nIN USER CREATE org is %s - role is %s, member_dict is %s\n', org_name, role, member_dict)
->>>>>>> upstream/master
     context['ignore_auth'] = True
     _get_action('organization_member_create')(context, member_dict) 
     
